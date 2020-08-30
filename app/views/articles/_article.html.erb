@@ -1,0 +1,20 @@
+     <% @articles.each do |article| %>
+     <%= link_to article_path(article) do %>
+     <div class="card">
+       <div class="card_image">
+        
+       </div>
+         <div class="card_heart">
+        
+           <span>23</span>
+         </div>
+          <div class="card_detail">
+          
+           <div>
+             <p>cohki0305</p>
+            <p><%= article.display_created_at %></p>
+           </div>
+         </div>
+       </div>
+     </div>
+       <% end %>
