@@ -1,0 +1,10 @@
+- @articles.each do |article|
+  = link_to article_path(article) do
+    .card
+      .card_image
+      .card_heart
+        %span 23
+      .card_detail
+        %div
+          %p cohki0305
+          %p= article.display_created_at
