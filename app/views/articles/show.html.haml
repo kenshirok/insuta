@@ -2,9 +2,9 @@
   %h1.article_title= @article.title
   .article_detail
     %div
-      %p cohki0305
-      %p 2020/4/16
-  - if user_signed_in?
+        %p= @article.author_name
+        %p= @article.user.display_name
+  - if user_signed_in? && current_user.has_written?(@article)
     .article_detail_actions
       .dropdown
         = image_tag 'actions.svg', class: 'dropbtn'
